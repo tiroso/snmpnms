@@ -12,6 +12,7 @@ RUN apt-get -y install \
 		apt-utils  \
 		procps \
 		wget \
+		git \
 		gnupg \
 		build-essential \
      libperl-dev \
@@ -70,5 +71,8 @@ RUN sed -i '/global nofork/d' /opt/fhem/fhem.cfg \
 
 ADD ./bin /usr/local/bin
 RUN chmod a+x /usr/local/bin/*
+
+ADD ./mibs /usr/share/snmp/mibs
+
 
 CMD ["snmp-run"]
