@@ -66,4 +66,4 @@ RUN cd net-snmp/perl && make install
 ADD ./bin /usr/local/bin
 RUN chmod a+x /usr/local/bin/*
 
-CMD ["fhem-run"]
+CMD ["snmp-run"]
