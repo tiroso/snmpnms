@@ -59,7 +59,7 @@ RUN cd net-snmp/perl && perl Makefile.PL
 
 RUN cd net-snmp/perl && make
 
-RUN cd net-snmp/perl && make test
+#RUN cd net-snmp/perl && make test
 
 RUN cd net-snmp/perl && make install
 WORKDIR ("/opt/fhem")
