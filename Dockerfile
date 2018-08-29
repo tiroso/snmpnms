@@ -49,6 +49,8 @@ RUN mv net-snmp-5.8 net-snmp
 
 WORKDIR ("net-snmp")
 
+RUN echo $PWD
+
 RUN ./configure --with-perl-modules
 
 RUN make
