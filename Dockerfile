@@ -72,7 +72,7 @@ RUN sed -i '/global nofork/d' /opt/fhem/fhem.cfg \
 ADD ./bin /usr/local/bin
 RUN chmod a+x /usr/local/bin/*
 
-ADD ./mibs /usr/share/snmp/mibs
+COPY ./mibs /usr/share/snmp/mibs
 
 
 CMD ["snmp-run"]
