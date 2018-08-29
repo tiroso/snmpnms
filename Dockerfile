@@ -47,7 +47,7 @@ RUN tar -xvzf net-snmp-5.8.tar.gz
 
 RUN mv net-snmp-5.8 net-snmp
 
-WORKINGDIR("net-snmp")
+WORKDIR ("net-snmp")
 
 RUN ./configure --with-perl-modules
 
@@ -55,7 +55,7 @@ RUN make
 
 RUN make install
 
-WORKDIR("perl")
+WORKDIR ("perl")
 
 RUN cp MakefileSubs.pm /etc/perl/MakefileSubs.pm
 
@@ -66,5 +66,5 @@ RUN make
 RUN make test
 
 RUN make install
-WORKDIR("/opt/fhem")
-CMD("perl fhem.pl fhem.cfg")
+WORKDIR ("/opt/fhem")
+CMD ("perl fhem.pl fhem.cfg")
