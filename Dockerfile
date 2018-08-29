@@ -22,8 +22,7 @@ RUN apt-get -y install \
 		cpanminus
 RUN echo "deb http://debian.fhem.de/nightly/ /" | tee -a /etc/apt/sources.list.d/fhem.list
 RUN apt-get update
-RUN apt-get -y install \
-		fhem 
+RUN apt-get -y install fhem 
  
 RUN pkill -f "fhem.pl" \
 	&& update-rc.d -f fhem remove \
