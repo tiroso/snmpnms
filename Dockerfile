@@ -62,5 +62,8 @@ RUN cd net-snmp/perl && make
 #RUN cd net-snmp/perl && make test
 
 RUN cd net-snmp/perl && make install
-WORKDIR ("/opt/fhem/")
-CMD ("cd /opt/fhem && perl fhem.pl fhem.cfg")
+
+ADD ./bin /usr/local/bin
+RUN chmod a+x /usr/local/bin/*
+
+CMD ["fhem-run"]
