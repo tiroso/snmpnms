@@ -15,11 +15,35 @@ RUN apt-get -y install \
 		gnupg \
 		build-essential \
      libperl-dev \
+		snmp \
+		snmpd \
     gcc \
     file \
     make \
 		apt-transport-https  \
-		cpanminus
+		cpanminus \
+						apt-utils  \
+						procps \
+						wget \
+						python \
+						gnupg \
+						build-essential \
+						dfu-programmer \
+						etherwake \
+						snmp \
+						snmpd \
+						usbutils \
+						apt-transport-https  \
+						telnet  \
+						sqlite3  \
+						libdbi-perl \ 
+						libdbd-sqlite3-perl \
+						cpanminus \
+						libwww-perl\
+						libsoap-lite-perl \
+						libxml-parser-perl \
+						libxml-parser-lite-perl \
+						libnet-telnet-perl 
 RUN wget -qO - https://debian.fhem.de/archive.key | apt-key add -
 RUN echo "deb http://debian.fhem.de/nightly/ /" | tee -a /etc/apt/sources.list.d/fhem.list
 RUN apt-get update
