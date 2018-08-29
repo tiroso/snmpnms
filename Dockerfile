@@ -63,4 +63,4 @@ RUN cd net-snmp/perl && make
 
 RUN cd net-snmp/perl && make install
 WORKDIR ("/opt/fhem/")
-CMD ("perl fhem.pl fhem.cfg")
+CMD ("cd /opt/fhem && perl fhem.pl fhem.cfg")
