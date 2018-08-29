@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /opt/fhem
+
+perl fhem.pl fhem.cfg;
