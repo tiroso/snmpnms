@@ -47,7 +47,7 @@ RUN tar -xvzf net-snmp-5.8.tar.gz
 
 RUN mv net-snmp-5.8 net-snmp
 
-RUN cd net-snmp && ./configure --with-perl-modules
+RUN cd net-snmp && ./configure --with-perl-modules --with-defaults
 
 RUN cd net-snmp && make
 
