@@ -20,6 +20,7 @@ RUN apt-get -y install \
     make \
 		apt-transport-https  \
 		cpanminus
+RUN wget -qO - https://debian.fhem.de/archive.key | apt-key add -
 RUN echo "deb http://debian.fhem.de/nightly/ /" | tee -a /etc/apt/sources.list.d/fhem.list
 RUN apt-get update
 RUN apt-get -y install fhem 
